@@ -4,4 +4,4 @@
   gather_facts: yes
   become: true
   roles:
-    - /tool-role/kibana
+    - tool-role/kibana
