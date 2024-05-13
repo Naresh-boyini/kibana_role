@@ -1,0 +1,7 @@
+---
+- name: Tests kibana role
+  hosts: all
+  gather_facts: yes
+  become: true
+  roles:
+    - kibana
