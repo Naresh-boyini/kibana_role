@@ -1,5 +1,5 @@
 ---
-elasticsearch_version: "8.x"
+elasticsearch_version: "7.x"
 java_package_redhat: "java-11-openjdk"
 java_package_ubuntu: "openjdk-11-jdk"
 cluster_name: "my-application"
