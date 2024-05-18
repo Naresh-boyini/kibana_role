@@ -73,5 +73,5 @@
   template:
     src: elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
-  notify: Reload systemd daemon  
+    notify: Reload systemd daemon  
   notify: Restart Elasticsearch
