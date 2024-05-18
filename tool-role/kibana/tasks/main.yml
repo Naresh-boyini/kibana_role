@@ -2,7 +2,7 @@
 # tasks file for Kibana
 - name: Gather IP address
   set_fact:
-    kibana1_ip_address: "{{ hostvars['kibana1'].ansible_default_ipv4.address }}"
+    kibana1_ip_address: "{{ ansible_default_ipv4.address }}"
     
 - name: Update system
   apt:
