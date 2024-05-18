@@ -1,7 +1,6 @@
 ---
 # handlers file for elasticsearch
 - name: Reload systemd daemon
-    become: true
     systemd:
       state: reloaded
       
