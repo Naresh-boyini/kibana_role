@@ -62,7 +62,7 @@
   when: ansible_os_family == 'RedHat' or ansible_distribution == 'CentOS'
   become: true
 
-  - name: Configure network settings
+- name: Configure network settings
   template:
     src: elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
