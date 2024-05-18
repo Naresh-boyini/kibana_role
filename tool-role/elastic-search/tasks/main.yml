@@ -1,5 +1,9 @@
 ---
 # tasks file for elasticsearch
+- name: Print private IP address
+  debug:
+    msg: "Private IP: {{ ansible_default_ipv4.address }}"
+    
 - name: Install Java on Red Hat (CentOS)
   yum:
     name: "{{ java_package_redhat }}"
