@@ -73,8 +73,8 @@
   template:
     src: elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
-
+  notify: Restart Elasticsearch
+  
 - name: Reload systemd daemon
   ansible.builtin.systemd_service:
     daemon_reload: yes
-  notify: Restart Elasticsearch
