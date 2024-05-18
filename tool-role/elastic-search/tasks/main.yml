@@ -61,17 +61,17 @@
     state: present
   when: ansible_os_family == 'RedHat' or ansible_distribution == 'CentOS'
   become: true
-
-- name: Configure network settings
-  template:
-    src: elasticsearch.yml.j2
-    dest: /etc/elasticsearch/elasticsearch.yml
-  #notify: Restart Elasticsearch
-
+  
 - name: Enable and start Elasticsearch service
   service:
     name: elasticsearch
     enabled: yes
     state: started
   become: true
-
+  
+- name: Configure network settings
+  template:
+    src: elasticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+  notify: Reload systemd daemon  
+  notify: Restart Elasticsearch
