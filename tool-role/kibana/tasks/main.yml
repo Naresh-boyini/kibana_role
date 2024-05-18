@@ -1,5 +1,9 @@
 ---
 # tasks file for Kibana
+- name: Gather IP address
+  set_fact:
+    my_ip_address: "{{ ansible_default_ipv4.address }}"
+    
 - name: Update system
   apt:
     update_cache: yes
