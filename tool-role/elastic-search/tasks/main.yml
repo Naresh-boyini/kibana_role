@@ -1,8 +1,8 @@
 ---
 # tasks file for elasticsearch
-- name: Print private IP address
-  debug:
-    msg: "Private IP: {{ ansible_default_ipv4.address }}"
+- name: Gather IP address
+  set_fact:
+    kibana1_ip_address: "{{ hostvars['kibana1'].ansible_default_ipv4.address }}"
     
 - name: Install Java on Red Hat (CentOS)
   yum:
