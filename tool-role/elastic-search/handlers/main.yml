@@ -1,5 +1,10 @@
 ---
 # handlers file for elasticsearch
+- name: Reload systemd daemon
+    become: true
+    systemd:
+      state: reloaded
+      
 - name: Restart Elasticsearch
   service:
     name: elasticsearch
