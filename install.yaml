@@ -1,8 +1,0 @@
----
-- name: Tests kibana role
-  hosts: all
-  gather_facts: yes
-  become: true
-  ignore_errors: true
-  roles:
-    - tool-role/kibana
